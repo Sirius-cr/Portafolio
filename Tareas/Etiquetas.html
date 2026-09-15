@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Heladería de etiquetas</title>
+</head>
+<body>
+
+    <!-- Ejemplo combinando las etiquetas del documento -->
+    <p>Conoce de nuestras recetas estrella: 
+        <a href="https://gelatomix.es/">Haz clic aquí</a>
+    </p>
+
+    <form oninput="resultado.value = parseInt(num1.value) + parseInt(num2.value)">
+        <label for="sabor">Elige un sabor de helado:</label>
+        <input list="sabor-helado" id="sabor" name="sabor">
+        <datalist id="sabor-helado">
+            <option value="Frutilla">
+            <option value="Vainilla">
+        </datalist>
+
+        <br><br>
+
+        <label for="ubicacion">Envase:</label>
+        <select id="ubicacion" name="ubicacion">
+            <optgroup label="Envases de helado">
+                <option value="co">Cono</option>
+                <option value="va">Vaso</option>
+            </optgroup>
+        </select>
+
+        <br><br>
+
+        <fieldset>
+            <legend>Suma rápida</legend>
+            <input type="number" id="num1" name="num1" value="23"> +
+            <input type="number" id="num2" name="num2" value="14"> =
+            <output name="resultado" for="num1 num2">37</output>
+        </fieldset>
+    </form>
+
+    <aside>
+        <details>
+            <summary>Información de publicación</summary>
+            <p>Escrito el <time datetime="2026-09-05">5 de septiembre de 2026</time>.</p>
+            <address>
+                Autor: Soporte Web<br>
+                Contacto: contacto@uleam.com
+            </address>
+        </details>
+        <p>Consulta la guía en <cite>Manual de HTML</cite> y recuerda <mark>estudiar base de datos...</mark></p>
+    </aside>
+
+    <br>
+
+    <h3>Registro de Clientes</h3>
+    <form action="/procesar" method="POST">
+        <table border="1">
+            <caption>Datos de Entrada</caption>
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Entrada</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="nombre">Nombre:</label></td>
+                    <td><input type="text" id="nombre" name="nombre" value="Jostin"></td>
+                </tr>
+                <tr>
+                    <td><label for="edad">Edad:</label></td>
+                    <td><input type="number" id="edad" name="edad" value="21"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+</body>
+</html>
