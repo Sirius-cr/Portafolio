@@ -1,0 +1,92 @@
+/* Estilos generales para centrar y dar aspecto limpio a la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Caja contenedora del formulario */
+.contenedor-principal {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Título principal */
+h2 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Cada grupo de etiqueta + input */
+.grupo-formulario {
+    margin-bottom: 15px;
+}
+
+/* Etiquetas de texto */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555555;
+    font-size: 14px;
+}
+
+/* Cajas de texto */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; /* Evita que el padding rompa el ancho */
+}
+
+/* Efecto al hacer clic dentro de un input */
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Estilo para los mensajes de error en rojo */
+.texto-error {
+    color: #d9534f;
+    font-size: 12px;
+    display: block;
+    margin-top: 4px;
+}
+
+/* Estilo para el mensaje de éxito en verde */
+.alerta-exito {
+    color: #28a745;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Botón de envío */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Efecto al pasar el mouse por encima del botón */
+button:hover {
+    background-color: #0056b3;
+}
