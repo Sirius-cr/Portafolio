@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materias Asignadas · Panel Docente · Aula Asistencia</title>
+  <link rel="stylesheet" href="css/comun.css">
+  <link rel="stylesheet" href="css/docente-panel.css">
+</head>
+<body>
+
+  <!-- Cabecera del Panel Docente -->
+  <header class="cabecera-principal">
+    <div class="cabecera-logo">
+      <div class="icono-logo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+          <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+        </svg>
+      </div>
+      <span>Aula <span class="separador">·</span> <span class="texto-asistencia">Asistencia</span></span>
+    </div>
+
+    <div class="cabecera-centro">
+      <span class="etiqueta-modulo">Panel docente</span>
+    </div>
+
+    <div class="cabecera-usuario">
+      <div class="info-usuario">
+        <div class="nombre-usuario">Prof. Arturo Vera</div>
+        <div class="rol-usuario">Docente · Facultad de Ingeniería</div>
+      </div>
+      <button type="button" id="boton-cerrar-sesion" class="boton-cerrar-sesion" title="Cerrar sesión">
+        <span>Cerrar sesión</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+          <polyline points="16 17 21 12 16 7"/>
+          <line x1="21" y1="12" x2="9" y2="12"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="contenedor-principal">
+    <!-- Encabezado de la página -->
+    <div class="seccion-encabezado">
+      <div>
+        <div class="saludo-subtitulo">Buenos días, Arturo</div>
+        <h1 class="titulo-pagina">Materias Asignadas</h1>
+        <p class="descripcion-pagina">Selecciona una materia para registrar la asistencia o consultar su historial.</p>
+      </div>
+
+      <div class="caja-fecha-periodo">
+        <div class="icono-calendario">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <div>
+          <div class="fecha-texto">Martes, 6 de octubre de 2026</div>
+          <div class="periodo-texto">Periodo académico 2026 – 2027</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resumen numérico -->
+    <div class="cuadricula-resumen">
+      <div class="tarjeta-resumen">
+        <div>
+          <div class="etiqueta-resumen">Materias asignadas</div>
+          <div class="valor-resumen">04</div>
+        </div>
+        <div class="icono-resumen">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="tarjeta-resumen">
+        <div>
+          <div class="etiqueta-resumen">Estudiantes en total</div>
+          <div class="valor-resumen">05</div>
+        </div>
+        <div class="icono-resumen">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="tarjeta-resumen">
+        <div>
+          <div class="etiqueta-resumen">Clases para hoy</div>
+          <div class="valor-resumen">02</div>
+        </div>
+        <div class="icono-resumen">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+            <path d="m9 16 2 2 4-4"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de cursos -->
+    <div class="subcabecera-cursos">
+      <h2 class="titulo-seccion">Tus cursos este periodo</h2>
+      <span class="conteo-materias">4 materias asignadas</span>
+    </div>
+
+    <div class="cuadricula-materias">
+      <!-- Materia 1: Matemática II (Clase hoy) -->
+      <div class="tarjeta-materia">
+        <div>
+          <div class="cabecera-tarjeta-materia">
+            <span class="codigo-materia">MAT-201</span>
+            <span class="insignia-horario hoy">Clase hoy</span>
+          </div>
+          <h3 class="nombre-materia">Matemática II</h3>
+          <p class="paralelo-estudiantes">Paralelo A · 5 estudiantes</p>
+
+          <div class="detalles-materia">
+            <div class="item-detalle">
+              <svg class="icono-detalle" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span>Martes y jueves · 08:00 – 10:00</span>
+            </div>
+            <div class="item-detalle">
+              <svg class="icono-detalle" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>Aula B-204</span>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="boton-tomar-asistencia" data-materia="MAT-201" data-nombre="Matemática II">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+            <path d="m9 14 2 2 4-4"/>
+          </svg>
+          <span>Tomar Asistencia</span>
+        </button>
+      </div>
+
+      <!-- Materia 2: Física I (Clase hoy) -->
+      <div class="tarjeta-materia">
+        <div>
+          <div class="cabecera-tarjeta-materia">
+            <span class="codigo-materia">FIS-102</span>
+            <span class="insignia-horario hoy">Clase hoy</span>
+          </div>
+          <h3 class="nombre-materia">Física I</h3>
+          <p class="paralelo-estudiantes">Paralelo B · 05 estudiantes</p>
+
+          <div class="detalles-materia">
+            <div class="item-detalle">
+              <svg class="icono-detalle" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span>Martes y viernes · 10:00 – 12:00</span>
+            </div>
+            <div class="item-detalle">
+              <svg class="icono-detalle" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>Aula B-108</span>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="boton-tomar-asistencia" data-materia="FIS-102" data-nombre="Física I">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+            <path d="m9 14 2 2 4-4"/>
+          </svg>
+          <span>Tomar Asistencia</span>
+        </button>
+      </div>
+
+      <!-- Materia 3: Programación I -->
+      <div class="tarjeta-materia">
+        <div>
+          <div class="cabecera-tarjeta-materia">
+            <span class="codigo-materia">INF-101</span>
+            <span class="insignia-horario proxima">Próxima clase: miércoles</span>
+          </div>
+          <h3 class="nombre-materia">Programación I</h3>
+          <p class="paralelo-estudiantes">Paralelo A · 05 estudiantes</p>
+
+          <div class="detalles-materia">
+            <div class="item-detalle">
+              <svg class="icono-detalle" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span>Lunes y miércoles · 14:00 – 16:00</span>
+            </div>
+            <div class="item-detalle">
+              <svg class="icono-detalle" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>Laboratorio 3</span>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="boton-tomar-asistencia" data-materia="INF-101" data-nombre="Programación I">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+            <path d="m9 14 2 2 4-4"/>
+          </svg>
+          <span>Tomar Asistencia</span>
+        </button>
+      </div>
+
+      <!-- Materia 4: Estadística Aplicada -->
+      <div class="tarjeta-materia">
+        <div>
+          <div class="cabecera-tarjeta-materia">
+            <span class="codigo-materia">EST-203</span>
+            <span class="insignia-horario proxima">Próxima clase: miércoles</span>
+          </div>
+          <h3 class="nombre-materia">Estadística Aplicada</h3>
+          <p class="paralelo-estudiantes">Paralelo C · 05 estudiantes</p>
+
+          <div class="detalles-materia">
+            <div class="item-detalle">
+              <svg class="icono-detalle" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span>Miércoles y viernes · 08:00 – 10:00</span>
+            </div>
+            <div class="item-detalle">
+              <svg class="icono-detalle" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>Aula C-302</span>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="boton-tomar-asistencia" data-materia="EST-203" data-nombre="Estadística Aplicada">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+            <path d="m9 14 2 2 4-4"/>
+          </svg>
+          <span>Tomar Asistencia</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mensaje recordatorio inferior -->
+    <div class="aviso-informativo">
+      <div class="icono-aviso">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="16" x2="12" y2="12"/>
+          <line x1="12" y1="8" x2="12.01" y2="8"/>
+        </svg>
+      </div>
+      <span>Recuerda guardar la asistencia al finalizar cada clase. Podrás revisarla en el historial del curso.</span>
+    </div>
+  </main>
+
+  <!-- Pie de página institucional -->
+  <footer class="pie-pagina-principal">
+    <div>Aula <span class="separador">·</span> Sistema de asistencia académica</div>
+    <div>Periodo octubre 2026 – febrero 2027</div>
+    <div><a href="#">Ayuda y soporte</a></div>
+  </footer>
+
+  <script src="js/docente-panel.js"></script>
+</body>
+</html>

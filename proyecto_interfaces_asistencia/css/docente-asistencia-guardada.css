@@ -1,0 +1,159 @@
+
+
+.contenedor-exito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+  max-width: 680px;
+  text-align: center;
+}
+
+.icono-circulo-exito {
+  width: 72px;
+  height: 72px;
+  background-color: #d1fae5;
+  border-radius: var(--radio-redondeado-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #059669;
+  margin-bottom: 18px;
+}
+
+.insignia-completado {
+  background-color: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: var(--radio-redondeado-full);
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.titulo-exito-guardado {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.subtitulo-exito-guardado {
+  font-size: 0.95rem;
+  color: var(--color-texto-secundario);
+  margin-bottom: 32px;
+}
+
+/* Tarjeta resumen del registro guardado */
+.tarjeta-resumen-guardado {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-redondeado-lg);
+  padding: 28px;
+  width: 100%;
+  box-shadow: var(--sombra-tarjeta);
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.fila-materia-horario {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-borde-suave);
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.nombre-materia-guardada {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-texto-principal);
+  margin-bottom: 4px;
+}
+
+.detalle-materia-guardada {
+  font-size: 0.85rem;
+  color: var(--color-texto-secundario);
+}
+
+.fecha-materia-guardada {
+  text-align: right;
+}
+
+.fecha-materia-guardada .fecha-texto {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-texto-principal);
+}
+
+.fecha-materia-guardada .horario-texto {
+  font-size: 0.85rem;
+  color: var(--color-texto-secundario);
+}
+
+/* Métricas en cuatro columnas */
+.cuadricula-metricas-guardadas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  text-align: center;
+}
+
+.item-metrica-guardada .numero-metrica {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.item-metrica-guardada .etiqueta-metrica {
+  font-size: 0.82rem;
+  color: var(--color-texto-secundario);
+}
+
+.item-metrica-guardada.total .numero-metrica {
+  color: #0f172a;
+}
+.item-metrica-guardada.presente .numero-metrica {
+  color: var(--color-presente);
+}
+.item-metrica-guardada.ausente .numero-metrica {
+  color: var(--color-falta);
+}
+.item-metrica-guardada.atraso .numero-metrica {
+  color: var(--color-atraso);
+}
+
+.boton-regresar-panel {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  color: #1e293b;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: var(--radio-redondeado-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.boton-regresar-panel:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.nota-pie-registro {
+  margin-top: 24px;
+  font-size: 0.82rem;
+  color: var(--color-texto-secundario);
+}

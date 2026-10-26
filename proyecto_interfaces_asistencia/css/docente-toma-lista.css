@@ -1,0 +1,245 @@
+
+/* Tarjetas de contadores de asistencia */
+.cuadricula-asistencia-conteo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.tarjeta-conteo-asistencia {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-redondeado-lg);
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--sombra-tarjeta);
+}
+
+.tarjeta-conteo-asistencia .etiqueta-conteo {
+  font-size: 0.85rem;
+  color: var(--color-texto-secundario);
+  margin-bottom: 4px;
+}
+
+.tarjeta-conteo-asistencia .valor-conteo {
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.tarjeta-conteo-asistencia.total .valor-conteo {
+  color: var(--color-primario);
+}
+.tarjeta-conteo-asistencia.presente .valor-conteo {
+  color: var(--color-presente);
+}
+.tarjeta-conteo-asistencia.ausente .valor-conteo {
+  color: var(--color-falta);
+}
+.tarjeta-conteo-asistencia.atraso .valor-conteo {
+  color: var(--color-atraso);
+}
+
+/* Cabecera de la tabla de estudiantes */
+.cabecera-seccion-tabla {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.boton-marcar-todos {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  color: #334155;
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: var(--radio-redondeado-md);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.boton-marcar-todos:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+/* Tabla de asistencia */
+.contenedor-tabla {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-redondeado-lg);
+  overflow: hidden;
+  box-shadow: var(--sombra-tarjeta);
+  margin-bottom: 24px;
+}
+
+.tabla-asistencia {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabla-asistencia th {
+  background-color: #f8fafc;
+  color: var(--color-texto-secundario);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--color-borde);
+  text-transform: uppercase;
+}
+
+.tabla-asistencia td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.88rem;
+  color: var(--color-texto-principal);
+  vertical-align: middle;
+}
+
+.tabla-asistencia tr:last-child td {
+  border-bottom: none;
+}
+
+.col-numero {
+  width: 60px;
+  color: var(--color-texto-apagado);
+  font-weight: 600;
+}
+
+.col-cedula {
+  width: 160px;
+  color: var(--color-texto-secundario);
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.col-nombres {
+  font-weight: 600;
+}
+
+.col-estado {
+  width: 320px;
+  text-align: right;
+}
+
+/* Grupo de botones de opción de estado */
+.grupo-botones-estado {
+  display: inline-flex;
+  background-color: #f1f5f9;
+  border-radius: var(--radio-redondeado-md);
+  padding: 3px;
+  gap: 4px;
+}
+
+.boton-opcion-estado {
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: var(--radio-redondeado-sm);
+  color: var(--color-texto-secundario);
+  background: transparent;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.boton-opcion-estado:hover {
+  color: var(--color-texto-principal);
+}
+
+/* Estados activos seleccionados */
+.boton-opcion-estado.activo-presente {
+  background-color: #dcfce7;
+  color: var(--color-presente);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.boton-opcion-estado.activo-ausente {
+  background-color: #fee2e2;
+  color: var(--color-falta);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.boton-opcion-estado.activo-atraso {
+  background-color: #fef3c7;
+  color: var(--color-atraso);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Pie informativo de la tabla */
+.pie-tabla-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background-color: #f8fafc;
+  border-top: 1px solid var(--color-borde);
+  font-size: 0.8rem;
+  color: var(--color-texto-secundario);
+}
+
+/* Barra inferior de confirmación y guardado */
+.barra-inferior-acciones {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-redondeado-lg);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--sombra-tarjeta);
+  margin-top: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.info-estado-guardado {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icono-estado-guardado {
+  color: var(--color-texto-secundario);
+}
+
+.titulo-estado-guardado {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-texto-principal);
+}
+
+.detalle-estado-guardado {
+  font-size: 0.8rem;
+  color: var(--color-texto-secundario);
+}
+
+.acciones-botones-derecha {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .cuadricula-asistencia-conteo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .cuadricula-asistencia-conteo {
+    grid-template-columns: 1fr;
+  }
+}

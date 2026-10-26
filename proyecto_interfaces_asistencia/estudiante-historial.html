@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Historial de Asistencia · Aula Asistencia</title>
+  <link rel="stylesheet" href="css/comun.css">
+  <link rel="stylesheet" href="css/estudiante-historial.css">
+</head>
+<body>
+
+  <!-- Cabecera de Historial -->
+  <header class="cabecera-principal">
+    <div class="cabecera-logo">
+      <div class="icono-logo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+          <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+        </svg>
+      </div>
+      <span>Aula <span class="separador">·</span> <span class="texto-asistencia">Asistencia</span></span>
+    </div>
+
+    <div class="cabecera-centro">
+      <span class="etiqueta-modulo">Historial y justificativos</span>
+    </div>
+
+    <div class="cabecera-usuario">
+      <div class="info-usuario">
+        <div class="nombre-usuario">Carlos Basurto Vera</div>
+        <div class="rol-usuario">Estudiante · Ingeniería en TI · ULEAM</div>
+      </div>
+      <a href="login.html" class="boton-cerrar-sesion" title="Cerrar sesión">
+        <span>Cerrar sesión</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+          <polyline points="16 17 21 12 16 7"/>
+          <line x1="21" y1="12" x2="9" y2="12"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Contenedor principal -->
+  <main class="contenedor-principal">
+    <!-- Migas de pan -->
+    <nav class="migajas-pan" aria-label="Ruta de navegación">
+      <a href="estudiante-panel.html">
+        <span>&larr;</span> Volver al panel
+      </a>
+      <span class="separador">/</span>
+      <span style="color: var(--color-texto-principal); font-weight: 600;">Historial y justificativos</span>
+    </nav>
+
+    <!-- Encabezado de la página -->
+    <div class="seccion-encabezado">
+      <div>
+        <h1 class="titulo-pagina">Mi historial de asistencia</h1>
+        <p class="descripcion-pagina">Revisa el registro de tus clases y solicita la justificación de una falta.</p>
+      </div>
+
+      <div class="caja-fecha-periodo">
+        <div class="icono-calendario">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <div>
+          <div class="fecha-texto">Martes, 6 de octubre de 2026</div>
+          <div class="periodo-texto">Periodo académico 2026 – 2027</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta superior con selector de materia e indicadores -->
+    <div class="tarjeta-materia-seleccionada">
+      <div class="fila-selector-materia">
+        <div class="selector-materia-contenedor">
+          <label for="selector-materia">Selecciona una materia</label>
+          <select id="selector-materia" class="select-materia">
+            <option value="MAT-201" selected>Matemática II · MAT-201</option>
+            <option value="FIS-102">Física I · FIS-102</option>
+          </select>
+        </div>
+
+        <div class="info-docente-materia">
+          <div class="docente-nombre">Prof. Arturo Vera · Paralelo A</div>
+          <div class="docente-horario">Martes y jueves · 08:00 – 10:00 · Aula B-204</div>
+        </div>
+
+        <div class="registros-semestre-bloque">
+          <div class="etiqueta-semestre">REGISTROS DEL SEMESTRE</div>
+          <div class="rango-fechas">1 – 6 de octubre de 2026</div>
+        </div>
+      </div>
+
+      <!-- Fila de métricas -->
+      <div class="fila-metricas-materia">
+        <div class="bloque-metrica-porcentaje">
+          <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--color-texto-secundario);">
+            <span>Asistencia de la materia</span>
+            <span id="historial-porcentaje-texto" class="porcentaje-texto">50%</span>
+          </div>
+          <div class="barra-progreso-fondo">
+            <div id="historial-barra-progreso" class="barra-progreso-relleno" style="width: 50%;"></div>
+          </div>
+        </div>
+
+        <div class="item-metrica-pequena">
+          <div id="historial-clases-registradas" class="valor" style="color: var(--color-texto-principal);">02</div>
+          <div class="etiqueta">Clases registradas</div>
+        </div>
+
+        <div class="item-metrica-pequena">
+          <div id="historial-presentes" class="valor" style="color: var(--color-presente);">01</div>
+          <div class="etiqueta">Presente</div>
+        </div>
+
+        <div class="item-metrica-pequena">
+          <div id="historial-atrasos" class="valor" style="color: var(--color-texto-principal);">00</div>
+          <div class="etiqueta">Atrasos</div>
+        </div>
+
+        <div class="item-metrica-pequena">
+          <div id="historial-faltas" class="valor" style="color: var(--color-falta);">01</div>
+          <div class="etiqueta">Falta</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de Registro de clases -->
+    <div class="cabecera-registro-clases">
+      <div>
+        <h2 style="font-size: 1.2rem; font-weight: 700;">Registro de clases · Matemática II</h2>
+        <p style="font-size: 0.85rem; color: var(--color-texto-secundario);">Todas las clases registradas desde el inicio del semestre.</p>
+      </div>
+
+      <a href="estudiante-solicitar-justificativo.html" class="boton-solicitar-justificativo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="12" y1="18" x2="12" y2="12"/>
+          <line x1="9" y1="15" x2="15" y2="15"/>
+        </svg>
+        <span>Solicitar Justificativo</span>
+      </a>
+    </div>
+
+    <!-- Tabla de clases registradas -->
+    <div class="contenedor-tabla">
+      <table class="tabla-asistencia">
+        <thead>
+          <tr>
+            <th style="width: 220px;">FECHA</th>
+            <th style="width: 200px;">ESTADO DE ASISTENCIA</th>
+            <th>OBSERVACIONES</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-tabla-clases">
+          <tr>
+            <td>
+              <div style="font-weight: 700;">06 oct 2026</div>
+              <div style="font-size: 0.8rem; color: var(--color-texto-secundario);">Martes · 08:00 – 10:00</div>
+            </td>
+            <td>
+              <span class="insignia-estado presente">Presente</span>
+            </td>
+            <td>
+              <span>Asistencia registrada por el docente.</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div style="font-weight: 700;">01 oct 2026</div>
+              <div style="font-size: 0.8rem; color: var(--color-texto-secundario);">Jueves · 08:00 – 10:00</div>
+            </td>
+            <td>
+              <span class="insignia-estado falta">Falta</span>
+            </td>
+            <td>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span>Sin justificativo presentado.</span>
+                <a href="estudiante-solicitar-justificativo.html" class="enlace-por-justificar">Por justificar</a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pie-tabla-info">
+        <span>Mostrando 2 de 2 clases · Más recientes primero</span>
+        <span>Actualizado al 6 de octubre de 2026</span>
+      </div>
+    </div>
+
+    <!-- Leyenda de estados y fórmula -->
+    <div class="fila-leyenda-estados">
+      <div class="leyenda-badges">
+        <span>Estados:</span>
+        <span class="insignia-estado presente">Presente</span>
+        <span class="insignia-estado atraso">Atraso</span>
+        <span class="insignia-estado falta">Falta</span>
+      </div>
+      <div>
+        <span>Asistencia = (presentes + atrasos) / clases registradas</span>
+      </div>
+    </div>
+
+    <!-- Sección informativa: Mis justificativos -->
+    <section id="seccion-mis-justificativos" class="seccion-mis-justificativos">
+      <div class="cabecera-justificativos">
+        <h2 style="font-size: 1.15rem; font-weight: 700;">Mis justificativos</h2>
+        <span class="insignia-falta-sin-justificar">1 falta sin justificar · 01 oct 2026</span>
+      </div>
+      <p style="font-size: 0.86rem; color: var(--color-texto-secundario);">Aún no has enviado solicitudes para Matemática II.</p>
+
+      <div class="cuadricula-pasos-justificativo">
+        <div class="tarjeta-paso">
+          <div class="icono-paso">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <div class="titulo-paso">Selecciona la fecha</div>
+          <div class="descripcion-paso">Identifica la clase que deseas justificar en tu historial.</div>
+        </div>
+
+        <div class="tarjeta-paso">
+          <div class="icono-paso">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/>
+            </svg>
+          </div>
+          <div class="titulo-paso">Adjunta tu respaldo</div>
+          <div class="descripcion-paso">Describe el motivo y añade un documento que lo sustente.</div>
+        </div>
+
+        <div class="tarjeta-paso">
+          <div class="icono-paso">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+              <path d="m9 14 2 2 4-4"/>
+            </svg>
+          </div>
+          <div class="titulo-paso">Consulta la revisión</div>
+          <div class="descripcion-paso">El docente revisará tu solicitud y registrará su respuesta.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aviso informativo inferior -->
+    <div class="aviso-informativo">
+      <div class="icono-aviso">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="16" x2="12" y2="12"/>
+          <line x1="12" y1="8" x2="12.01" y2="8"/>
+        </svg>
+      </div>
+      <span>Solicitar un justificativo no cambia automáticamente el estado de asistencia. La falta seguirá visible mientras se revisa la solicitud.</span>
+    </div>
+  </main>
+
+  <!-- Pie de página institucional -->
+  <footer class="pie-pagina-principal">
+    <div>Aula <span class="separador">·</span> Sistema de asistencia académica</div>
+    <div>Periodo octubre 2026 – febrero 2027</div>
+    <div><a href="#">Ayuda y soporte</a></div>
+  </footer>
+
+  <script src="js/estudiante-historial.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coordinación · Justificaciones · Aula Asistencia</title>
+  <link rel="stylesheet" href="css/comun.css">
+  <link rel="stylesheet" href="css/coordinacion-justificaciones.css">
+</head>
+<body>
+
+  <!-- Cabecera de Coordinación -->
+  <header class="cabecera-principal">
+    <div class="cabecera-logo">
+      <div class="icono-logo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+          <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+        </svg>
+      </div>
+      <span>Aula <span class="separador">·</span> <span class="texto-asistencia">Asistencia</span></span>
+    </div>
+
+    <div class="cabecera-centro">
+      <span class="etiqueta-modulo">Panel de coordinación</span>
+    </div>
+
+    <div class="cabecera-usuario">
+      <div class="info-usuario">
+        <div class="nombre-usuario">Coordinación académica</div>
+        <div class="rol-usuario">Facultad de Ingeniería · ULEAM</div>
+      </div>
+      <a href="login.html" class="boton-cerrar-sesion" title="Cerrar sesión">
+        <span>Cerrar sesión</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+          <polyline points="16 17 21 12 16 7"/>
+          <line x1="21" y1="12" x2="9" y2="12"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Contenedor principal -->
+  <main class="contenedor-principal">
+    <!-- Migas de pan -->
+    <nav class="migajas-pan" aria-label="Ruta de navegación">
+      <a href="#">Gestión de asistencia</a>
+      <span class="separador">/</span>
+      <span style="color: var(--color-texto-principal); font-weight: 600;">Coordinación</span>
+    </nav>
+
+    <!-- Encabezado de la página -->
+    <div class="seccion-encabezado">
+      <div>
+        <h1 class="titulo-pagina">Coordinación · Justificaciones</h1>
+        <p class="descripcion-pagina">Revisa el respaldo de cada solicitud y registra su aceptación o denegación.</p>
+      </div>
+
+      <div class="caja-fecha-periodo">
+        <div class="icono-calendario">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <div>
+          <div class="fecha-texto">Martes, 6 de octubre de 2026</div>
+          <div class="periodo-texto">Periodo académico 2026 – 2027</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 Métricas de resumen de solicitudes -->
+    <div class="cuadricula-resumen">
+      <div class="tarjeta-resumen">
+        <div>
+          <div class="etiqueta-resumen">Solicitudes recibidas</div>
+          <div id="contador-recibidas" class="valor-resumen" style="color: var(--color-primario);">06</div>
+          <div style="font-size: 0.78rem; color: var(--color-texto-secundario); margin-top: 4px;">Total del periodo</div>
+        </div>
+        <div class="icono-resumen">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="tarjeta-resumen">
+        <div>
+          <div class="etiqueta-resumen">Pendientes</div>
+          <div id="contador-pendientes" class="valor-resumen" style="color: var(--color-atraso);">03</div>
+          <div style="font-size: 0.78rem; color: var(--color-texto-secundario); margin-top: 4px;">Por revisar</div>
+        </div>
+        <div class="icono-resumen" style="color: var(--color-atraso);">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="tarjeta-resumen">
+        <div>
+          <div class="etiqueta-resumen">Aceptadas</div>
+          <div id="contador-aceptadas" class="valor-resumen" style="color: var(--color-presente);">02</div>
+          <div style="font-size: 0.78rem; color: var(--color-texto-secundario); margin-top: 4px;">Revisión favorable</div>
+        </div>
+        <div class="icono-resumen" style="color: var(--color-presente);">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="tarjeta-resumen">
+        <div>
+          <div class="etiqueta-resumen">Denegadas</div>
+          <div id="contador-denegadas" class="valor-resumen" style="color: var(--color-falta);">01</div>
+          <div style="font-size: 0.78rem; color: var(--color-texto-secundario); margin-top: 4px;">Revisión no favorable</div>
+        </div>
+        <div class="icono-resumen" style="color: var(--color-falta);">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="15" y1="9" x2="9" y2="15"/>
+            <line x1="9" y1="9" x2="15" y2="15"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenedor en 2 columnas: Lista y Detalle (Página 5) -->
+    <div class="cuadricula-coordinacion">
+      <!-- Columna Izquierda: Lista de Solicitudes -->
+      <div class="panel-lista-solicitudes">
+        <div class="cabecera-panel-lista">
+          <div class="fila-titulo-conteo">
+            <h2 class="titulo-lista-solicitudes">Solicitudes de justificación</h2>
+            <span id="texto-total-solicitudes" class="total-solicitudes-texto">6 solicitudes en este periodo</span>
+          </div>
+
+          <!-- Buscador -->
+          <div class="contenedor-buscador-estudiante">
+            <svg class="icono-lupa" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input 
+              type="text" 
+              id="buscador-estudiante" 
+              class="input-buscador-estudiante" 
+              placeholder="Buscar por nombre del estudiante"
+            >
+          </div>
+
+          <!-- Filtros rápidos por estado -->
+          <div class="barra-filtros-chips">
+            <button type="button" class="boton-chip-filtro activo" data-filtro="Todas">Todas 6</button>
+            <button type="button" class="boton-chip-filtro" data-filtro="Pendiente">Pendientes 3</button>
+            <button type="button" class="boton-chip-filtro" data-filtro="Aceptada">Aceptadas 2</button>
+            <button type="button" class="boton-chip-filtro" data-filtro="Denegada">Denegadas 1</button>
+          </div>
+        </div>
+
+        <!-- Tabla interactiva de solicitudes -->
+        <div style="overflow-x: auto;">
+          <table class="tabla-solicitudes-coordinacion">
+            <thead>
+              <tr>
+                <th>ESTUDIANTE</th>
+                <th>MATERIA</th>
+                <th>FECHA DE FALTA</th>
+                <th>ESTADO</th>
+                <th style="width: 20px;"></th>
+              </tr>
+            </thead>
+            <tbody id="cuerpo-tabla-solicitudes">
+              <!-- Se rellena dinámicamente con js/coordinacion-justificaciones.js -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pie-tabla-info">
+          <span>Mostrando 6 de 6 solicitudes</span>
+          <span>Pendientes primero</span>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Detalle de la Solicitud Seleccionada -->
+      <div class="panel-detalle-solicitud">
+        <div class="cabecera-panel-detalle">
+          <h2 class="titulo-detalle-solicitud">Detalle de la solicitud</h2>
+          <span id="detalle-codigo-solicitud" class="codigo-detalle-badge">J-2026-006</span>
+        </div>
+
+        <!-- Información del Estudiante -->
+        <div class="info-alumno-detalle">
+          <div>
+            <h3 id="detalle-nombre-estudiante" class="nombre-alumno-grande">Carlos Basurto Vera</h3>
+            <div id="detalle-carrera-estudiante" class="subtitulo-alumno-detalle">Ingeniería en TI · Segundo semestre</div>
+            <div id="detalle-fecha-envio" class="fecha-envio-detalle">Enviada el 6 de octubre de 2026 · 09:15</div>
+          </div>
+          <span id="detalle-estado-badge" class="insignia-estado pendiente">Pendiente</span>
+        </div>
+
+        <!-- Datos académicos de la falta -->
+        <div class="bloque-campo-detalle">
+          <div class="etiqueta-campo-detalle">Materia</div>
+          <div id="detalle-materia" class="valor-campo-detalle">Matemática II · MAT-201 · Paralelo A</div>
+        </div>
+
+        <div class="fila-dos-columnas-detalle">
+          <div>
+            <div class="etiqueta-campo-detalle">Fecha de la falta</div>
+            <div id="detalle-fecha-falta" class="valor-campo-detalle">1 de octubre de 2026</div>
+            <div id="detalle-horario-falta" style="font-size: 0.8rem; color: var(--color-texto-secundario);">Jueves · 08:00 – 10:00</div>
+          </div>
+
+          <div>
+            <div class="etiqueta-campo-detalle">Docente</div>
+            <div id="detalle-docente" class="valor-campo-detalle">Prof. Arturo Vera</div>
+            <div id="detalle-aula" style="font-size: 0.8rem; color: var(--color-texto-secundario);">Aula B-204</div>
+          </div>
+        </div>
+
+        <div class="bloque-campo-detalle">
+          <div class="etiqueta-campo-detalle">Motivo de la justificación</div>
+          <div id="detalle-motivo" class="valor-campo-detalle" style="color: var(--color-primario);">Salud · Atención médica</div>
+        </div>
+
+        <div class="bloque-campo-detalle">
+          <div class="etiqueta-campo-detalle">Descripción</div>
+          <div id="detalle-descripcion" class="descripcion-justificacion-caja">
+            El 1 de octubre no pude asistir a Matemática II por una consulta médica y reposo indicado ese día. Adjunto el certificado médico como respaldo de mi inasistencia.
+          </div>
+        </div>
+
+        <!-- Documento de respaldo adjunto -->
+        <div class="bloque-campo-detalle">
+          <div class="etiqueta-campo-detalle">Documento de respaldo</div>
+          <div class="tarjeta-documento-adjunto">
+            <div class="info-archivo-adjunto">
+              <div class="icono-pdf-verde">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                </svg>
+              </div>
+              <div>
+                <div id="detalle-nombre-archivo" class="nombre-archivo-pdf">certificado_medico_01oct2026.pdf</div>
+                <div id="detalle-tamano-archivo" class="peso-archivo-pdf">PDF · 248 KB · 1 página</div>
+              </div>
+            </div>
+            <div>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-texto-secundario);">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </div>
+          </div>
+          <a href="#" id="enlace-abrir-documento" class="enlace-abrir-documento">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            <span>Abrir documento para revisión</span>
+          </a>
+        </div>
+
+        <!-- Observaciones de coordinación -->
+        <div class="bloque-campo-detalle">
+          <div class="cabecera-observaciones-coordinacion">
+            <div class="etiqueta-campo-detalle">Observaciones de coordinación</div>
+            <div id="detalle-estado-observacion" class="estado-observaciones-texto">Sin registrar</div>
+          </div>
+          <textarea 
+            id="detalle-observacion" 
+            class="textarea-observacion-coordinacion" 
+            placeholder="Escribe el resultado de la revisión o el motivo de la denegación."
+          ></textarea>
+          <div class="nota-obligatoria-denegar">
+            Obligatorias al denegar. El estudiante podrá ver la observación junto con la decisión.
+          </div>
+        </div>
+
+        <!-- Botones de Aceptar / Denegar -->
+        <div class="fila-botones-decision">
+          <button type="button" id="boton-aceptar-justificacion" class="boton-aceptar-decision">
+            <span>✓</span> Aceptar justificación
+          </button>
+          <button type="button" id="boton-denegar-justificacion" class="boton-denegar-decision">
+            <span>✕</span> Denegar justificación
+          </button>
+        </div>
+
+        <div class="nota-pie-decision">
+          La solicitud seguirá pendiente hasta registrar una decisión.
+        </div>
+      </div>
+    </div>
+
+    <!-- Aviso informativo inferior -->
+    <div class="aviso-informativo">
+      <div class="icono-aviso">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="16" x2="12" y2="12"/>
+          <line x1="12" y1="8" x2="12.01" y2="8"/>
+        </svg>
+      </div>
+      <span>Selecciona una solicitud para consultar su motivo, revisar el respaldo y registrar la decisión de coordinación.</span>
+    </div>
+  </main>
+
+  <!-- Pie de página institucional -->
+  <footer class="pie-pagina-principal">
+    <div>Aula <span class="separador">·</span> Sistema de asistencia académica</div>
+    <div>Periodo octubre 2026 – febrero 2027</div>
+    <div><a href="#">Ayuda y soporte</a></div>
+  </footer>
+
+  <script src="js/coordinacion-justificaciones.js"></script>
+</body>
+</html>

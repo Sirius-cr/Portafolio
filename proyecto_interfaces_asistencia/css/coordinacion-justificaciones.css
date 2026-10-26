@@ -1,0 +1,399 @@
+
+.cuadricula-coordinacion {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* Columna Izquierda: Lista de solicitudes */
+.panel-lista-solicitudes {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-redondeado-lg);
+  box-shadow: var(--sombra-tarjeta);
+  overflow: hidden;
+}
+
+.cabecera-panel-lista {
+  padding: 20px 24px 16px 24px;
+  border-bottom: 1px solid var(--color-borde-suave);
+}
+
+.fila-titulo-conteo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.titulo-lista-solicitudes {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-texto-principal);
+}
+
+.total-solicitudes-texto {
+  font-size: 0.82rem;
+  color: var(--color-texto-secundario);
+}
+
+/* Buscador de estudiantes */
+.contenedor-buscador-estudiante {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.input-buscador-estudiante {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-redondeado-md);
+  padding: 0 14px 0 38px;
+  font-size: 0.88rem;
+  background-color: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.input-buscador-estudiante:focus {
+  background-color: var(--color-blanco);
+  border-color: var(--color-primario);
+}
+
+.icono-lupa {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-texto-apagado);
+}
+
+/* Pestañas de filtro */
+.barra-filtros-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.boton-chip-filtro {
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: var(--radio-redondeado-full);
+  color: var(--color-texto-secundario);
+  background-color: #f1f5f9;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.boton-chip-filtro:hover {
+  background-color: #e2e8f0;
+}
+
+.boton-chip-filtro.activo {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+}
+
+/* Tabla de solicitudes */
+.tabla-solicitudes-coordinacion {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-solicitudes-coordinacion th {
+  background-color: #f8fafc;
+  color: var(--color-texto-secundario);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 12px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.fila-solicitud {
+  cursor: pointer;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background-color 0.15s ease;
+}
+
+.fila-solicitud:hover {
+  background-color: #f8fafc;
+}
+
+.fila-solicitud.seleccionada {
+  background-color: #f0fdfa;
+  border-left: 3px solid var(--color-primario);
+}
+
+.fila-solicitud td {
+  padding: 14px 18px;
+  font-size: 0.85rem;
+  vertical-align: middle;
+}
+
+.nombre-estudiante-solicitud {
+  font-weight: 700;
+  color: var(--color-texto-principal);
+}
+
+.codigo-solicitud-estudiante {
+  font-size: 0.75rem;
+  color: var(--color-primario);
+}
+
+.materia-nombre-fila {
+  font-weight: 600;
+  color: var(--color-texto-principal);
+}
+
+.paralelo-codigo-fila {
+  font-size: 0.75rem;
+  color: var(--color-texto-secundario);
+}
+
+.fecha-falta-fila {
+  font-size: 0.82rem;
+  color: var(--color-texto-principal);
+}
+
+.flecha-solicitud {
+  color: var(--color-texto-apagado);
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+/* Columna Derecha: Detalle de la solicitud */
+.panel-detalle-solicitud {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-redondeado-lg);
+  padding: 28px;
+  box-shadow: var(--sombra-tarjeta);
+}
+
+.cabecera-panel-detalle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-borde-suave);
+}
+
+.titulo-detalle-solicitud {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-texto-principal);
+}
+
+.codigo-detalle-badge {
+  font-size: 0.85rem;
+  color: var(--color-texto-secundario);
+  font-family: monospace;
+}
+
+/* Encabezado del alumno en detalle */
+.info-alumno-detalle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.nombre-alumno-grande {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-texto-principal);
+  margin-bottom: 2px;
+}
+
+.subtitulo-alumno-detalle {
+  font-size: 0.84rem;
+  color: var(--color-texto-secundario);
+  margin-bottom: 4px;
+}
+
+.fecha-envio-detalle {
+  font-size: 0.78rem;
+  color: var(--color-texto-apagado);
+}
+
+/* Bloques de campos en detalle */
+.bloque-campo-detalle {
+  margin-bottom: 18px;
+}
+
+.etiqueta-campo-detalle {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-texto-secundario);
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.valor-campo-detalle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-texto-principal);
+}
+
+.fila-dos-columnas-detalle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.descripcion-justificacion-caja {
+  font-size: 0.86rem;
+  color: #334155;
+  line-height: 1.5;
+  background-color: #f8fafc;
+  padding: 12px 14px;
+  border-radius: var(--radio-redondeado-md);
+  border: 1px solid var(--color-borde);
+}
+
+/* Tarjeta documento de respaldo */
+.tarjeta-documento-adjunto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #f8fafc;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-redondeado-md);
+  margin-bottom: 8px;
+}
+
+.info-archivo-adjunto {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icono-pdf-verde {
+  width: 36px;
+  height: 36px;
+  background-color: #d1fae5;
+  border-radius: var(--radio-redondeado-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #059669;
+}
+
+.nombre-archivo-pdf {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-texto-principal);
+}
+
+.peso-archivo-pdf {
+  font-size: 0.75rem;
+  color: var(--color-texto-secundario);
+}
+
+.enlace-abrir-documento {
+  font-size: 0.82rem;
+  color: var(--color-primario);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.enlace-abrir-documento:hover {
+  text-decoration: underline;
+}
+
+/* Observaciones de coordinación */
+.cabecera-observaciones-coordinacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.estado-observaciones-texto {
+  font-size: 0.78rem;
+  color: var(--color-texto-apagado);
+}
+
+.textarea-observacion-coordinacion {
+  width: 100%;
+  min-height: 80px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-redondeado-md);
+  padding: 10px 12px;
+  font-size: 0.86rem;
+  resize: vertical;
+  margin-bottom: 6px;
+}
+
+.nota-obligatoria-denegar {
+  font-size: 0.76rem;
+  color: var(--color-texto-secundario);
+  margin-bottom: 20px;
+}
+
+/* Botones de decisión */
+.fila-botones-decision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.boton-aceptar-decision {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  font-size: 0.88rem;
+  font-weight: 700;
+  height: 42px;
+  border-radius: var(--radio-redondeado-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.boton-aceptar-decision:hover {
+  background-color: var(--color-primario-hover);
+}
+
+.boton-denegar-decision {
+  background-color: var(--color-blanco);
+  color: var(--color-falta);
+  border: 1px solid var(--color-falta-borde);
+  font-size: 0.88rem;
+  font-weight: 700;
+  height: 42px;
+  border-radius: var(--radio-redondeado-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.boton-denegar-decision:hover {
+  background-color: var(--color-falta-fondo);
+}
+
+.nota-pie-decision {
+  font-size: 0.78rem;
+  color: var(--color-texto-secundario);
+  text-align: center;
+}
+
+@media (max-width: 990px) {
+  .cuadricula-coordinacion {
+    grid-template-columns: 1fr;
+  }
+}

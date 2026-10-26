@@ -1,0 +1,278 @@
+
+
+.cuadricula-formulario-justificacion {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 28px;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+/* Tarjeta del formulario principal */
+.tarjeta-formulario-solicitud {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-redondeado-lg);
+  padding: 32px;
+  box-shadow: var(--sombra-tarjeta);
+}
+
+.cabecera-tarjeta-formulario {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-borde-suave);
+}
+
+.titulo-datos-solicitud {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-texto-principal);
+}
+
+.texto-campos-obligatorios {
+  font-size: 0.8rem;
+  color: var(--color-texto-apagado);
+}
+
+/* Ficha del estudiante solicitante */
+.ficha-estudiante-solicitante {
+  background-color: #f8fafc;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-redondeado-md);
+  padding: 14px 18px;
+  margin-bottom: 24px;
+}
+
+.ficha-estudiante-solicitante .etiqueta-pequena {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-texto-secundario);
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.ficha-estudiante-solicitante .nombre-completo {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-texto-principal);
+}
+
+.ficha-estudiante-solicitante .carrera-detalle {
+  font-size: 0.82rem;
+  color: var(--color-texto-secundario);
+}
+
+/* Fila de 2 campos */
+.fila-dos-campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.campo-solo-lectura {
+  background-color: #f1f5f9;
+  cursor: not-allowed;
+  color: #475569;
+}
+
+.subtexto-campo {
+  font-size: 0.78rem;
+  color: var(--color-texto-secundario);
+  margin-top: 6px;
+}
+
+/* Área de texto de descripción */
+.textarea-justificacion {
+  width: 100%;
+  min-height: 110px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-redondeado-md);
+  padding: 12px 14px;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  resize: vertical;
+  background-color: var(--color-blanco);
+  transition: all 0.2s ease;
+}
+
+.textarea-justificacion:focus {
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px rgba(11, 128, 115, 0.12);
+}
+
+/* Zona para adjuntar archivos */
+.zona-subida-archivo {
+  border: 2px dashed #cbd5e1;
+  border-radius: var(--radio-redondeado-lg);
+  padding: 28px 20px;
+  text-align: center;
+  background-color: #f8fafc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.zona-subida-archivo:hover, .zona-subida-archivo.arrastrando {
+  border-color: var(--color-primario);
+  background-color: var(--color-primario-claro);
+}
+
+.icono-subida {
+  color: var(--color-primario);
+  margin-bottom: 8px;
+}
+
+.texto-principal-subida {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-texto-principal);
+  margin-bottom: 4px;
+}
+
+.texto-formato-subida {
+  font-size: 0.78rem;
+  color: var(--color-texto-secundario);
+  margin-bottom: 14px;
+}
+
+.boton-seleccionar-archivo {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  color: #334155;
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: var(--radio-redondeado-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.vista-archivo-cargado {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: var(--radio-redondeado-md);
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.vista-archivo-cargado.visible {
+  display: flex;
+}
+
+/* Barra inferior del formulario */
+.pie-acciones-formulario {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-borde-suave);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Columna lateral de información */
+.columna-lateral-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tarjeta-lateral {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-redondeado-lg);
+  padding: 22px;
+  box-shadow: var(--sombra-tarjeta);
+}
+
+.cabecera-tarjeta-lateral {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.titulo-tarjeta-lateral {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-texto-principal);
+}
+
+.lista-instrucciones-previas {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.item-instruccion {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.84rem;
+}
+
+.item-instruccion .check-icono {
+  color: var(--color-primario);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.item-instruccion .titulo-instruccion {
+  font-weight: 700;
+  color: var(--color-texto-principal);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.item-instruccion .texto-instruccion {
+  color: var(--color-texto-secundario);
+  line-height: 1.4;
+}
+
+/* Alerta de advertencia amarilla */
+.tarjeta-alerta-permanencia {
+  background-color: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: var(--radio-redondeado-lg);
+  padding: 18px 20px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.tarjeta-alerta-permanencia .icono-alerta {
+  color: #b45309;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.tarjeta-alerta-permanencia .titulo-alerta {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #92400e;
+  margin-bottom: 4px;
+}
+
+.tarjeta-alerta-permanencia .texto-alerta {
+  font-size: 0.82rem;
+  color: #b45309;
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .cuadricula-formulario-justificacion {
+    grid-template-columns: 1fr;
+  }
+}

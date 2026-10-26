@@ -1,0 +1,219 @@
+
+.cuerpo-login {
+  background-color: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecera-login {
+  background-color: var(--color-blanco);
+  border-bottom: 1px solid var(--color-borde);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.enlace-acceso-institucional {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-primario);
+}
+
+.enlace-acceso-institucional:hover {
+  text-decoration: underline;
+}
+
+.contenedor-login {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.tarjeta-login {
+  background: var(--color-blanco);
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--radio-redondeado-lg);
+  padding: 44px 40px 36px 40px;
+  box-shadow: 0 4px 20px rgba(134, 42, 42, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--color-borde);
+}
+
+.icono-candado-superior {
+  width: 48px;
+  height: 48px;
+  background-color: #e6f6f4;
+  border-radius: var(--radio-redondeado-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primario);
+  margin-bottom: 24px;
+}
+
+.titulo-login {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.subtitulo-login {
+  font-size: 0.92rem;
+  color: var(--color-texto-secundario);
+  line-height: 1.45;
+  margin-bottom: 28px;
+}
+
+/* Alerta de credenciales incorrectas (Estado de la Página 8) */
+.alerta-error-login {
+  background-color: #fef2f2;
+  border: 1px solid #fee2e2;
+  border-left: 4px solid var(--color-falta);
+  border-radius: var(--radio-redondeado-md);
+  padding: 14px 16px;
+  margin-bottom: 24px;
+  display: none; /* Se activa con JavaScript o clase .visible */
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.alerta-error-login.visible {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+.icono-alerta-error {
+  color: var(--color-falta);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.titulo-alerta-error {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #991b1b;
+  margin-bottom: 2px;
+}
+
+.mensaje-alerta-error {
+  font-size: 0.82rem;
+  color: #b91c1c;
+  line-height: 1.4;
+}
+
+/* Grupo de entradas del formulario */
+.grupo-formulario {
+  margin-bottom: 20px;
+}
+
+.etiqueta-formulario {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+.contenedor-input-icono {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-login {
+  width: 100%;
+  height: 46px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-redondeado-md);
+  padding: 0 42px 0 16px;
+  font-size: 0.92rem;
+  background-color: var(--color-blanco);
+  transition: all 0.2s ease;
+}
+
+.input-login:focus {
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px rgba(11, 128, 115, 0.15);
+}
+
+.input-login.con-error {
+  border-color: var(--color-falta);
+  background-color: #fffbfa;
+}
+
+.icono-input-derecha {
+  position: absolute;
+  right: 14px;
+  color: var(--color-texto-apagado);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icono-input-derecha:hover {
+  color: var(--color-texto-principal);
+}
+
+/* Botón iniciar sesión */
+.boton-enviar-login {
+  width: 100%;
+  height: 48px;
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  border-radius: var(--radio-redondeado-md);
+  font-size: 0.98rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 26px;
+  transition: all 0.2s ease;
+}
+
+.boton-enviar-login:hover {
+  background-color: var(--color-primario-hover);
+}
+
+.enlace-olvido-contrasena {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-primario);
+}
+
+.enlace-olvido-contrasena:hover {
+  text-decoration: underline;
+}
+
+.pie-tarjeta-institucional {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-borde-suave);
+  font-size: 0.8rem;
+  color: var(--color-texto-secundario);
+}
+
+.pie-tarjeta-institucional .icono-seguridad {
+  color: var(--color-texto-apagado);
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

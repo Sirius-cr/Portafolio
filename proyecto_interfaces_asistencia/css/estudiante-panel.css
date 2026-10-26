@@ -1,0 +1,132 @@
+
+
+.seccion-subtitulo-conteo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.seccion-subtitulo-conteo .titulo-resumen-asistencia {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-texto-principal);
+}
+
+.seccion-subtitulo-conteo .periodo-resumen {
+  font-size: 0.85rem;
+  color: var(--color-texto-secundario);
+}
+
+/* Tarjeta individual de materia de estudiante */
+.tarjeta-materia-estudiante {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-redondeado-lg);
+  padding: 24px;
+  box-shadow: var(--sombra-tarjeta);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-materia-estudiante:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.cabecera-materia-estudiante {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.profesor-materia {
+  font-size: 0.88rem;
+  color: var(--color-texto-secundario);
+  margin-bottom: 14px;
+}
+
+.horario-materia-estudiante {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--color-texto-secundario);
+  margin-bottom: 20px;
+}
+
+/* Bloque de porcentaje de asistencia */
+.bloque-porcentaje {
+  margin-bottom: 18px;
+}
+
+.cabecera-porcentaje {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.etiqueta-asistencia {
+  font-size: 0.85rem;
+  color: var(--color-texto-secundario);
+}
+
+.valor-porcentaje {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-primario);
+}
+
+.valor-porcentaje.bajo {
+  color: var(--color-primario);
+}
+
+.desglose-clases {
+  font-size: 0.82rem;
+  color: var(--color-texto-secundario);
+  margin-top: 8px;
+}
+
+/* Pie de tarjeta de materia */
+.pie-materia-estudiante {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-borde-suave);
+  margin-top: 16px;
+  font-size: 0.85rem;
+}
+
+.alerta-falta-materia {
+  color: var(--color-falta);
+  font-weight: 600;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.estado-sin-faltas {
+  color: var(--color-texto-secundario);
+  font-size: 0.82rem;
+}
+
+.enlace-ver-historial {
+  color: var(--color-primario);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.2s ease;
+}
+
+.enlace-ver-historial:hover {
+  gap: 8px;
+}
