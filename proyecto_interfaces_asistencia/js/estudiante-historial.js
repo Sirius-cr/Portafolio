@@ -1,7 +1,3 @@
-/* ==========================================================================
-   INTERACCIÓN Y FILTRO DE HISTORIAL
-   ========================================================================== */
-
 document.addEventListener("DOMContentLoaded", function () {
   // Selector de materia del estudiante
   const selectorMateria = document.getElementById("selector-materia");

@@ -1,7 +1,3 @@
-/* ==========================================================================
-   PANEL DEL ESTUDIANTE
-   ========================================================================== */
-
 document.addEventListener("DOMContentLoaded", function () {
   // Manejo de enlaces para ver historial de asistencia
   const enlacesVerHistorial = document.querySelectorAll(".enlace-ver-historial");

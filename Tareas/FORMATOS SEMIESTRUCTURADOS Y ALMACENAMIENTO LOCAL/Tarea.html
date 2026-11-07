@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Estudiantes</title>
+    <link rel="stylesheet" href="estilost.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <h1>Sistema de Registro de Estudiantes</h1>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <div class="contenedor-principal">
+
+        <!-- FORMULARIO -->
+        <section class="tarjeta">
+            <h2>Registrar Nuevo Estudiante</h2>
+            
+            <form id="formularioEstudiante" novalidate>
+                
+                <!-- Cédula -->
+                <div class="campo">
+                    <label for="cedula">Cédula:</label>
+                    <input type="text" id="cedula" maxlength="10" placeholder="Ej: 1723456789">
+                    <span class="mensaje-error" id="errorCedula">Cédula no válida (10 dígitos numéricos).</span>
+                </div>
+
+                <!-- Apellidos y Nombres -->
+                <div class="fila-doble">
+                    <div class="campo">
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" id="apellidos" placeholder="Ej: Perez Gomez">
+                        <span class="mensaje-error" id="errorApellidos">Ingrese solo letras.</span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="nombres">Nombres:</label>
+                        <input type="text" id="nombres" placeholder="Ej: Juan Carlos">
+                        <span class="mensaje-error" id="errorNombres">Ingrese solo letras.</span>
+                    </div>
+                </div>
+
+                <!-- Dirección -->
+                <div class="campo">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" placeholder="Ej: Av. Central y Calle 4">
+                    <span class="mensaje-error" id="errorDireccion">Mínimo 5 caracteres.</span>
+                </div>
+
+                <!-- Teléfono y Correo -->
+                <div class="fila-doble">
+                    <div class="campo">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="text" id="telefono" maxlength="10" placeholder="Ej: 0991234567">
+                        <span class="mensaje-error" id="errorTelefono">10 dígitos (empieza con 09).</span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">Correo Electrónico:</label>
+                        <input type="email" id="correo" placeholder="ejemplo@correo.com">
+                        <span class="mensaje-error" id="errorCorreo">Formato de correo no válido.</span>
+                    </div>
+                </div>
+
+                <!-- Facultad -->
+                <div class="campo">
+                    <label for="facultad">Facultad:</label>
+                    <select id="facultad">
+                        <option value="">-- Seleccionar --</option>
+                        <option value="Ingeniería">Ingeniería</option>
+                        <option value="Ciencias de la Salud">Ciencias de la Salud</option>
+                        <option value="Administración">Administración</option>
+                        <option value="Educación">Educación</option>
+                        <option value="Derecho">Derecho</option>
+                    </select>
+                    <span class="mensaje-error" id="errorFacultad">Seleccione una facultad.</span>
+                </div>
+
+                <!-- Nivel y Paralelo -->
+                <div class="fila-doble">
+                    <div class="campo">
+                        <label for="nivel">Nivel / Semestre:</label>
+                        <select id="nivel">
+                            <option value="">-- Seleccionar --</option>
+                            <option value="1er Semestre">1er Semestre</option>
+                            <option value="2do Semestre">2do Semestre</option>
+                            <option value="3er Semestre">3er Semestre</option>
+                            <option value="4to Semestre">4to Semestre</option>
+                            <option value="5to Semestre">5to Semestre</option>
+                        </select>
+                        <span class="mensaje-error" id="errorNivel">Seleccione un nivel.</span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="paralelo">Paralelo:</label>
+                        <input type="text" id="paralelo" maxlength="2" placeholder="Ej: A">
+                        <span class="mensaje-error" id="errorParalelo">Solo 1 o 2 letras/números.</span>
+                    </div>
+                </div>
+
+                <!-- Botones -->
+                <div class="botones">
+                    <button type="submit" id="botonGuardar" class="btn-guardar">Guardar Estudiante</button>
+                    <button type="button" id="botonLimpiar" class="btn-limpiar">Limpiar</button>
+                </div>
+
+            </form>
+            
+            <!-- Mensaje de notificación -->
+            <div id="mensajeAlerta" class="alerta oculta"></div>
+        </section>
+
+        <!-- SECCIÓN DE LA TABLA Y BÚSQUEDA -->
+        <section class="tarjeta">
+            <div class="cabecera-tabla">
+                <h2>Estudiantes Registrados</h2>
+                <!-- Buscador -->
+                <input type="text" id="cajaBusqueda" placeholder="Buscar por nombre, cédula o facultad...">
+            </div>
+
+            <!-- Tabla de datos -->
+            <div class="contenedor-tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cédula</th>
+                            <th>Estudiante</th>
+                            <th>Teléfono / Correo</th>
+                            <th>Facultad / Nivel</th>
+                            <th>Paralelo</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTabla">
+                        <!-- Los datos se cargan dinámicamente con JS -->
+                    </tbody>
+                </table>
+                <p id="textoVacio" class="texto-vacio">No hay estudiantes registrados.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="tarea.js"></script>
+</body>
+</html>

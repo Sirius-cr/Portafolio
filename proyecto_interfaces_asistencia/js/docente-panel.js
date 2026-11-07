@@ -1,7 +1,3 @@
-/* ==========================================================================
-   PANEL DEL DOCENTE
-   ========================================================================== */
-
 document.addEventListener("DOMContentLoaded", function () {
   // Lista de botones para tomar asistencia
   const botonesTomarAsistencia = document.querySelectorAll(".boton-tomar-asistencia");

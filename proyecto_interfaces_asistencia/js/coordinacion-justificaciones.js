@@ -1,7 +1,3 @@
-/* ==========================================================================
-   VALIDACIONES Y GESTIÓN DE COORDINACIÓN · JUSTIFICACIONES
-   ========================================================================== */
-
 document.addEventListener("DOMContentLoaded", function () {
   // Lista de solicitudes (datos basados fielmente en la Página 5)
   let listaSolicitudes = [

@@ -1,7 +1,3 @@
-/* ==========================================================================
-   VALIDACIONES EN JAVASCRIPT
-   ========================================================================== */
-
 document.addEventListener("DOMContentLoaded", function () {
   // Referencias a los elementos del formulario
   const formularioSolicitud = document.getElementById("formulario-solicitud-justificativo");

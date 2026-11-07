@@ -1,7 +1,3 @@
-/* ==========================================================================
-   VALIDACIONES Y GESTIÓN DE TOMA DE LISTA
-   ========================================================================== */
-
 document.addEventListener("DOMContentLoaded", function () {
   // Lista de estudiantes del curso Matemática II (como en la Página 3)
   const listaEstudiantes = [

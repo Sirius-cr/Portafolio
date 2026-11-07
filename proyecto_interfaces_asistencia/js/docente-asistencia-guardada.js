@@ -1,7 +1,3 @@
-/* ==========================================================================
-   ASISTENCIA GUARDADA CORRECTAMENTE
-   ========================================================================== */
-
 document.addEventListener("DOMContentLoaded", function () {
   const botonRegresar = document.getElementById("boton-regresar-panel");
 
